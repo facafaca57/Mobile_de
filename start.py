@@ -48,6 +48,7 @@ worksheet = workbook.add_worksheet()
 # c = Car(title="1",descriptions="1",producer="1",model="1",year="1",price="1",img="1")
 # c.save()
 # Car.objects.all().delete()
+# python3 manage.py migrate cars zero
 
 def saveDB(title,descriptions,producer,model,year,price,img):
     cursor.execute("""INSERT INTO cars_car (title,descriptions,producer,model,year,price,img) 
