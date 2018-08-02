@@ -1,0 +1,30 @@
+{% extends "cars/wrapper.html" %}
+
+{% block content %}
+<div class="page-header">
+    <h1><a href="https://www.mobile.de">Cars Mobile.de</a></h1>
+</div>
+<div class="content container">
+    <div class="row jumbotron">
+        <div class="col-md-11">
+            {% for car in cars %}
+                <div class="cars alert alert-warning">
+                    <img class="img" src="{{ car.img }}" alt="{{ car.title }}">
+                    <h5>{{ car.id }}.    <a href="">{{ car.title }}</a></h5>
+                    <p>Опис: {{ car.descriptions}}</p>
+                    <div class="details">
+                        <strong>Виробник: </strong>{{ car.producer }}, <strong>Модель: </strong>{{ car.model }}, <strong>Рік: </strong>{{ car.year }}
+                    </div>
+                    <div class="btn btn-info">
+                        <strong>Ціна: </strong>{{ car.price}}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <button type="button" class="btn btn-info more" style="width: 100%;">Загрузити ще...</button>
+        <div class="alert alert-info" id = "message" style="display: none; width: 100%; text-align: center;">
+            <strong>Данні відсутні..</strong>
+        </div>
+    </div>
+</div>
+{% endblock %}

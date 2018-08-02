@@ -1,0 +1,47 @@
+.page-header {
+    background-color: #ff9400;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+    text-align: center;
+}
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+
+.content {
+    margin-top: 0;
+}
+
+.cars {
+    margin-bottom: 30px;
+}
+
+.cars h1 a, .post h1 a:visited {
+    color: #000000;
+}
+
+.alert.alert-info {
+    margin-bottom: 0 !important;
+}
+
+.alert.alert-info p {
+    float: right;
+}
+
+.col-md-11 {
+    margin:0 auto;
+}
+.details {
+    margin-bottom: 10px;
+}
+
+.img {
+    float: right;
+    height: 150px;
+}
+.cars > h5 > a {
+    text-decoration: none;
+}
