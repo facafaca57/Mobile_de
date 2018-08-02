@@ -44,9 +44,9 @@ allPrice = []
 workbook = xlsxwriter.Workbook('Cars.xlsx')
 worksheet = workbook.add_worksheet()
 
-from cars.models import Car
-c = Car(title="1",descriptions="1",producer="1",model="1",year="1",price="1",img="1")
-c.save()
+# from cars.models import Car
+# c = Car(title="1",descriptions="1",producer="1",model="1",year="1",price="1",img="1")
+# c.save()
 
 def saveDB(title,descriptions,producer,model,year,price,img):
     cursor.execute("""INSERT INTO cars_car (title,descriptions,producer,model,year,price,img) 
