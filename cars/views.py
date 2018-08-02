@@ -15,3 +15,6 @@ def load(request):
 
         else:
             return HttpResponse("Request method is not a GET")
+
+def add(request):
+    return render(request, "cars/addNew.html")
