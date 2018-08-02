@@ -16,7 +16,7 @@ $('.more').click(function(){
                 $('#message').css("display","block");
             }
             else{
-                // $('.col-md-11').append(data);
+                $('.col-md-11').append(data);
             }
         }
      })
