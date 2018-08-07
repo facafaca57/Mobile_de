@@ -6,12 +6,12 @@
 </div>
 <div class="content container">
     <div class="row jumbotron">
-        <a href="add/"><button type="button" class="btn btn-secondary">Пошук</button></a>
+        <button type="button" class="btn btn-secondary" onclick="location.href='add/';">Пошук</button>
         <div class="col-md-11">
             {% for car in cars %}
                 <div class="cars alert alert-warning animated fadeInUp">
                     <img class="img" src="{{ car.img }}" alt="{{ car.title }}">
-                    <h5>{{ car.id }}.    <a href="">{{ car.title }}</a></h5>
+                    <h5><a href="">{{ car.title }}</a></h5>
                     <p>Опис: {{ car.descriptions}}</p>
                     <div class="details">
                         <strong>Виробник: </strong>{{ car.producer }}, <strong>Модель: </strong>{{ car.model }}, <strong>Рік: </strong>{{ car.year }}
@@ -29,3 +29,4 @@
     </div>
 </div>
 {% endblock %}
+<!-- {{ car.id }}.     -->

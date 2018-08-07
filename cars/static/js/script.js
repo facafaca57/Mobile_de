@@ -21,3 +21,31 @@ $('.more').click(function(){
         }
      })
 });
+
+$('.search').click(function(){
+    fuels = $(".zapravka").val();
+    kpp = $(".kpp").val();
+    categories = $(".categories").val();
+    year = $(".year").val();
+
+    $.ajax(
+    {
+        type:"GET",
+        url: "/search",
+        data:{
+            fuels: fuels,
+            kpp:kpp,
+            categories:categories,
+            year:year
+        },
+        success: function(data) 
+        {
+            $('#msg').css("display", "inline");
+            $('#msg').text("Знайдено: " + data);
+        },
+        error: function (data) {
+            $('#msg').css("display", "inline");
+            $('#msg').text("Перегляд");
+        }
+     })
+});

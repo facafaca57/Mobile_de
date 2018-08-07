@@ -2,7 +2,7 @@
             {% for car in cars %}
                 <div class="cars alert alert-warning animated fadeInUp">
                     <img class="img" src="{{ car.img }}" alt="{{ car.title }}">
-                    <h5>{{ car.id }}.    <a href="">{{ car.title }}</a></h5>
+                    <h5><a href="">{{ car.title }}</a></h5>
                     <p>Опис: {{ car.descriptions}}</p>
                     <div class="details">
                         <strong>Виробник: </strong>{{ car.producer }}, <strong>Модель: </strong>{{ car.model }}, <strong>Рік: </strong>{{ car.year }}
@@ -12,3 +12,4 @@
                     </div>
                 </div>
             {% endfor %}
+            <!-- {{ car.id }}.     -->

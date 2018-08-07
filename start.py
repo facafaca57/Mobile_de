@@ -55,6 +55,8 @@ def saveDB(title,descriptions,producer,model,year,price,img):
                   VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s')""" % (title,descriptions,producer,model,year,price,img)
                )
     conn.commit()
+    # c = Car(title=title,descriptions=descriptions,producer=producer,model=model,year=year,price=price,img=img)
+    # c.save()
 
 def getUrl(pageN):
     #Задаємо посилання на сайт магазину та на апі сайта з курсом валют

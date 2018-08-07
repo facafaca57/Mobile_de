@@ -2,32 +2,31 @@
     {% block content %}
     <div class="container mt-3 jumbotron">
     <h2>Вибір характеристик</h2>
-    <form action="/action_page.php">
-      <select name="cars" class="custom-select mb-3">
-        <option selected>Тип заправлення</option>
-        <option value="DIESEL">Дизель</option>
+      <p>Тип заправлення</p>
+      <select name="cars" class="custom-select mb-3 zapravka">
+        <option selected value="DIESEL">Дизель</option>
         <option value="ELECTRICITY">Елекричний</option>
         <option value="LPG">Нафтовий газ</option>
         <option value="PETROL">Бензин</option>
       </select>
-      <select name="cars" class="custom-select mb-3">
-        <option selected>Коробка передач</option>
+      <p>Коробка передач</p>
+      <select name="cars" class="custom-select mb-3 kpp">
         <option value="AUTOMATIC_GEAR">Автомат</option>
-        <option value="MANUAL_GEAR">Ручна</option>
+        <option selected value="MANUAL_GEAR">Ручна</option>
         <option value="SEMIAUTOMATIC_GEAR">Полу-автомат</option>
       </select>
-      <select name="cars" class="custom-select mb-3">
-        <option selected>Категорія</option>
+      <p>Категорія</p>
+      <select name="cars" class="custom-select mb-3 categories">
         <option value="Cabrio">Кабріолет</option>
         <option value="EstateCar">Автомобіль нерухомості</option>
         <option value="Limousine">Лімузин</option>
         <option value="OffRoad">Позашляховик</option>
         <option value="SmallCar">Малий автомобіль</option>
-        <option value="SportsCar">Спортивний автомобіль</option>
+        <option selected value="SportsCar">Спортивний автомобіль</option>
         <option value="Van">Мікроавтобус</option>
       </select>
-      <select name="cars" class="custom-select mb-3">
-        <option selected>Рік</option>
+      <p>Рік</p>
+      <select name="cars" class="custom-select mb-3 year">
         <option value="2010">2010</option>
         <option value="2011">2011</option>
         <option value="2012">2012</option>
@@ -35,10 +34,11 @@
         <option value="2014">2014</option>
         <option value="2015">2015</option>
         <option value="2016">2016</option>
-        <option value="2017">2017</option>
+        <option selected value="2017">2017</option>
         <option value="2018">2018</option>
       </select>
-      <button type="submit" class="btn btn-primary">Пошук</button>
-    </form>
+      <button type="button" class="btn btn-light" onclick="location.href='/';">Назад</button>
+      <button type="submit" class="btn btn-primary search">Пошук</button>
+      <button type="button" class="btn btn-info" id = "msg" onclick="location.href='/';" style="display: none;"></button>
   </div>
     {% endblock %}
